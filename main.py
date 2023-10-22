@@ -10,10 +10,10 @@ def home():
 
 @app.route("/api/v1/<word>")
 def about(word):
-    word = "sun"
+    example = "sun"
     return {
         "definition": word.upper(),
-        "word": word
+        "word": example
     }
 
 
