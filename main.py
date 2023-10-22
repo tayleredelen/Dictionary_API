@@ -9,13 +9,11 @@ def home():
 
 
 @app.route("/api/v1/<word>")
-def about(word):
-    example = "sun"
-    return {
-        "definition": word.upper(),
-        "word": example
-    }
+def api(word):
+    definition = word.upper()
+    result_dictionary = {"word": word, "definition": definition}
+    return result_dictionary
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5002)
